@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hw6_background"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/text_view_ent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toTopOf="@id/text_view_ent"
+        android:layout_marginTop="400dp"
+        app:layout_constraintStart_toStartOf="@id/text_view_ent"
+        app:layout_constraintEnd_toEndOf="@id/text_view_ent"
+        android:textColor="@color/white"
+        android:text="Добро пожаловать!"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/textViewWelcome"
+        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
+        app:layout_constraintEnd_toEndOf="@id/textViewWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="Выполните вход  или зарегистрируйтесь"
+        android:textStyle="normal"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="550dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+        app:layout_constraintStart_toStartOf="@id/textViewDescription"
+        app:layout_constraintEnd_toEndOf="@id/textViewDescription"
+        android:layout_marginTop="32dp"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edit_text_corners"
+        android:hint="Введите вашу почту"
+        android:paddingStart="16dp"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="550dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="@id/editTextEmail"
+        android:layout_marginTop="32dp"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edit_text_corners"
+        android:hint="Введите ваш пароль"
+        android:paddingStart="16dp"
+        android:textColor="#000000" />
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="550dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Войти"
+        android:background="@drawable/bg_button"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@id/editTextPassword"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/gray" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
