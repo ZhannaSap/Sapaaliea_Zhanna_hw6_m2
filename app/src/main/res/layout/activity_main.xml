@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/hw6_background"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/text_view_ent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Вход"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -25,71 +25,91 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        app:layout_constraintTop_toTopOf="@id/text_view_ent"
-        android:layout_marginTop="400dp"
-        app:layout_constraintStart_toStartOf="@id/text_view_ent"
-        app:layout_constraintEnd_toEndOf="@id/text_view_ent"
-        android:textColor="@color/white"
+        android:layout_marginTop="300dp"
         android:text="Добро пожаловать!"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/text_view_ent"
+        app:layout_constraintStart_toStartOf="@id/text_view_ent"
+        app:layout_constraintTop_toTopOf="@id/text_view_ent" />
 
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="300dp"
-        android:layout_height="90dp"
-        app:layout_constraintStart_toStartOf="@id/textViewWelcome"
-        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
-        app:layout_constraintEnd_toEndOf="@id/textViewWelcome"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
         android:text="Выполните вход  или зарегистрируйтесь"
+        android:textColor="@color/white"
+        android:textSize="17sp"
         android:textStyle="normal"
-        android:textSize="30sp" />
+        app:layout_constraintEnd_toEndOf="@id/textViewWelcome"
+        app:layout_constraintStart_toStartOf="@id/textViewWelcome"
+        app:layout_constraintTop_toBottomOf="@id/textViewWelcome" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="550dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:layout_below="@id/textViewDescription"
-        app:layout_constraintTop_toBottomOf="@id/textViewDescription"
-        app:layout_constraintStart_toStartOf="@id/textViewDescription"
-        app:layout_constraintEnd_toEndOf="@id/textViewDescription"
-        android:layout_marginTop="32dp"
-        android:textColorHint="@color/gray"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edit_text_corners"
         android:hint="Введите вашу почту"
         android:paddingStart="16dp"
         android:textColor="#000000"
-        />
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/textViewDescription"
+        app:layout_constraintStart_toStartOf="@id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="550dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:layout_below="@id/textViewDescription"
-        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
-        app:layout_constraintStart_toStartOf="@id/editTextEmail"
-        app:layout_constraintEnd_toEndOf="@id/editTextEmail"
-        android:layout_marginTop="32dp"
-        android:textColorHint="@color/gray"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_corners"
         android:hint="Введите ваш пароль"
         android:paddingStart="16dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="550dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:text="Войти"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_button"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
-        app:layout_constraintStart_toStartOf="@id/editTextPassword"
-        app:layout_constraintEnd_toEndOf="@id/editTextPassword"
+        android:text="Войти"
         android:textColor="@color/white"
-        android:backgroundTint="@color/gray" />
+        app:layout_constraintEnd_toEndOf="@id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
+    <TextView
+        android:id="@+id/foggot_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Забыли пароль?"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/buttonLogin"
+        app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
+
+    <TextView
+        android:id="@+id/textview_click_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нажми сюда"
+        app:layout_constraintStart_toEndOf="@id/foggot_password_text"
+        app:layout_constraintTop_toBottomOf="@id/buttonLogin"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/orange"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
